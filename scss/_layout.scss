@@ -1,3 +1,5 @@
+/* ---------- NAVBAR ------------*/
+
 .navbar {
     position: relative;
     z-index: 200;
@@ -96,6 +98,8 @@
     transform: rotateZ(40deg);
 }
 
+/* ---------- HEADER ------------*/
+
 .header {
     width: 100%;
     height: 100vh;
@@ -115,15 +119,25 @@
     }
 }
 
+/* ---------- ABOUT US ------------*/
+
 .about-us {
-    height: 90vh;
+    height: 70vh;
     display: flex;
     align-items: center;
+
+    @media(max-width: 900px) {
+        height: 55vh;
+    }
 
     &-left {
         width: 40%;
         position: relative;
         left: -200px;
+
+        @media(max-width: 1300px) {
+            left: -150px;
+        }
 
         img {
             width: 100%;
@@ -138,16 +152,28 @@
         align-items: center;
         padding: 0 100px;
         box-sizing: border-box;
+
+        @media(max-width: 1300px) {
+            padding: 0 50px;
+        }
     }
 
     .stars {
         margin: 30px 0;
+
+        @media(max-width: 1000px) {
+            margin: 15px 0;
+        }
     }
 
     .star {
         font-size: 15px;
         color: $color-primary;
         margin-left: 10px;
+
+        @media(max-width: 1000px) {
+            font-size: 12px;
+        }
     }
 
     .description {
@@ -160,8 +186,18 @@
         &::first-letter {
             padding-left: 50px;
         }
+
+        @media(max-width: 1600px) {
+            font-size: 18px;
+        }
+
+        @media(max-width: 1000px) {
+            font-size: 14px;
+        }
     }
 }
+
+/* ---------- GALLERY ------------*/
 
 .gallery {
     .cards-wrapper {
@@ -169,6 +205,8 @@
         flex-wrap: wrap;
     }
 }
+
+/* ---------- FOOTER ------------*/
 
 .footer {
     padding: 70px 0;
@@ -199,6 +237,10 @@
 
             &:hover {
                 color: $color-primary;
+            }
+
+            @media(max-width: 1000px) {
+                font-size: 35px;
             }
         }
     }
