@@ -9,6 +9,39 @@
 body {
   background-color: #262626; }
 
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px; }
+
+::-webkit-scrollbar-button {
+  width: 17px;
+  height: 17px; }
+
+::-webkit-scrollbar-thumb {
+  background: #d3ab55;
+  border: 55px none #ffffff;
+  border-radius: 100px; }
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8863e; }
+
+::-webkit-scrollbar-thumb:active {
+  background: #a8863e; }
+
+::-webkit-scrollbar-track {
+  background: #333333;
+  border: 23px none #ffffff;
+  border-radius: 100px; }
+
+::-webkit-scrollbar-track:hover {
+  background: #333333; }
+
+::-webkit-scrollbar-track:active {
+  background: #333333; }
+
+::-webkit-scrollbar-corner {
+  background: transparent; }
+
 .navbar {
   position: relative;
   z-index: 200; }
