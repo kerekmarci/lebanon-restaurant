@@ -1,4 +1,4 @@
-/* ---------- HAMBURGER MENU ------------*/
+/* ---------- HAMBURGER MENU ------------ */
 
 .hamburger-menu {
     width: 40px;
@@ -7,6 +7,16 @@
     top: 10%;
     right: 5%;
     z-index: 300;
+
+    @media(max-width: 800px) {
+        width: 35px;
+        height: 35px;
+    }
+
+    @media(max-width: 500px) {
+        width: 25px;
+        height: 25px;
+    }
 
     .menu {
         @extend %fullSpace;
@@ -22,11 +32,19 @@
             background-color: $color-primary;
             transform-origin: right;
             transition: all .5s .5s;
+
+            @media(max-width: 800px) {
+                height: 3px;
+            }
+
+            @media(max-width: 500px) {
+                height: 2px;
+            }
         }
     }
 }
 
-/* ---------- LOGO ------------*/
+/* ---------- LOGO ------------ */
 
 .logo {
     font-size: 70px;
@@ -44,7 +62,16 @@
         width: 90px;
         height: 90px;
     }
+
+    @media(max-width: 800px) {
+        font-size: 30px;
+        width: 50px;
+        height: 50px;
+        border-width: 2px;
+    }
 }
+
+/* ---------- NAME ------------ */
 
 .main-name {
     font-family: $font-nunito;
@@ -55,6 +82,11 @@
     @media(max-width: 1000px) {
         font-size: 40px;
     }
+
+    @media(max-width: 500px) {
+        font-size: 25px;
+        text-align: center;
+    }
 }
 
 .sub-name {
@@ -63,7 +95,14 @@
     color: $color-secondary;
     text-align: center;
     @include textStyles;
+
+    @media(max-width: 500px) {
+        font-size: 12px;
+        text-align: center;
+    }
 }
+
+/* ---------- HEADING ------------ */
 
 .main-heading {
     font-family: $font-dancingScript;
@@ -78,6 +117,11 @@
 
     @media(max-width: 1000px) {
         font-size: 60px;
+    }
+
+    @media(max-width: 500px) {
+        font-size: 40px;
+        margin-bottom: 20px;
     }
 }
 
@@ -102,7 +146,14 @@
     @media(max-width: 1000px) {
         font-size: 30px;
     }
+
+    @media(max-width: 500px) {
+        font-size: 20px;
+        margin-bottom: 50px;
+    }
 }
+
+/* ---------- BUTTON ------------ */
 
 .main-btn {
     width: 170px;
@@ -122,7 +173,21 @@
         background-color: $color-primary;
         color: $color-dark;
     }
+
+    @media(max-width: 800px) {
+        width: 150px;
+        height: 35px;
+        font-size: 12px;
+    }
+
+    @media(max-width: 500px) {
+        width: 130px;
+        height: 30px;
+        font-size: 10px;
+    }
 }
+
+/* ---------- IMAGE CARDS ------------*/
 
 .card {
     width: 33.3333%;
@@ -154,6 +219,14 @@
             @media(max-width: 900px) {
                 font-size: 35px;
             }
+
+            @media(max-width: 650px) {
+                font-size: 25px;
+            }
+
+            @media(max-width: 500px) {
+                display: none;
+            }
         }
 
         &-paragraph {
@@ -164,6 +237,14 @@
 
             @media(max-width: 900px) {
                 font-size: 20px;
+            }
+
+            @media(max-width: 650px) {
+                font-size: 15px;
+            }
+
+            @media(max-width: 500px) {
+                display: none;
             }
         }
 
@@ -185,6 +266,12 @@
             @media(max-width: 900px) {
                 font-size: 12px;
                 width: 130px;
+                height: 30px;
+            }
+
+            @media(max-width: 650px) {
+                font-size: 10px;
+                width: 100px;
                 height: 30px;
             }
         }

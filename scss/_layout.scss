@@ -15,27 +15,51 @@
             left: -50vw;
             transition: left .8s cubic-bezier(0.79, 0.33, 0.14, 0.53);
 
+            @media(max-width: 800px) {
+                display: none;
+            }
+
             .left-img {
                 width: 50%;
                 position: absolute;
                 box-shadow: 0 15px 60px rgba($color-black, .4);
                 opacity: .8;
                 border-radius: 10px;
+
+                @media(max-width: 1300px) {
+                    width: 55%;
+                }
+
+                @media(max-width: 1000px) {
+                    width: 65%;
+                }
             }
 
             .left-img-1 {
                 top: 15%;
                 left: 15%;
+
+                @media(max-width: 1000px) {
+                    left: 5%;
+                }
             }
 
             .left-img-2 {
                 top: 35%;
                 left: 25%;
+
+                @media(max-width: 1000px) {
+                    left: 15%;
+                }
             }
 
             .left-img-3 {
                 top: 55%;
                 left: 35%;
+
+                @media(max-width: 1000px) {
+                    left: 25%;
+                }
             }
         }
 
@@ -47,6 +71,11 @@
             right: -50vw;
             @include flexLayout;
             transition: right .8s cubic-bezier(0.79, 0.33, 0.14, 0.53);
+
+            @media(max-width: 800px) {
+                width: 100vw;
+                right: -100vw;
+            }
         }
 
         .nav-list {
@@ -68,6 +97,10 @@
                 &:hover {
                     color: $color-primary;
                     letter-spacing: 4px;
+                }
+
+                @media(max-width: 600px) {
+                    font-size: 40px;
                 }
             }
         }
@@ -111,6 +144,10 @@
         display: flex;
         align-items: center;
         @include centering(15%);
+
+        @media(max-width: 500px) {
+            @include centering(12%);
+        }
     }
 
     &-banner {
@@ -130,6 +167,10 @@
         height: 55vh;
     }
 
+    @media(max-width: 500px) {
+        height: 55vh;
+    }   
+
     &-left {
         width: 40%;
         position: relative;
@@ -137,6 +178,10 @@
 
         @media(max-width: 1300px) {
             left: -150px;
+        }
+
+        @media(max-width: 800px) {
+            display: none;
         }
 
         img {
@@ -155,6 +200,10 @@
 
         @media(max-width: 1300px) {
             padding: 0 50px;
+        }
+
+        @media(max-width: 800px) {
+            width: 100%;
         }
     }
 
@@ -213,10 +262,18 @@
     @include flexLayout;
     flex-direction: column;
 
+    @media(max-width: 500px) {
+        padding: 40px 0;
+    }
+
     &-header {
         display: flex;
         align-items: center;
         margin-bottom: 70px;
+
+        @media(max-width: 500px) {
+            margin-bottom: 40px;
+        }
     }
 
     .social-media {
@@ -224,6 +281,11 @@
         width: 300px;
         justify-content: space-between;
         margin-bottom: 70px;
+
+        @media(max-width: 500px) {
+            width: 200px;
+            margin-bottom: 40px;
+        }    
 
         &-item {
             list-style: none;
@@ -242,6 +304,10 @@
             @media(max-width: 1000px) {
                 font-size: 35px;
             }
+
+            @media(max-width: 1000px) {
+                font-size: 25px;
+            }
         }
     }
 
@@ -250,5 +316,15 @@
         font-size: 18px;
         color: $color-secondary;
         @include textStyles(capitalize);
+
+        @media(max-width: 800px) {
+            width: 70%;
+            margin: auto;
+            text-align: center;
+        }
+
+        @media(max-width: 1000px) {
+            font-size: 15px;
+        }
     }
 }
