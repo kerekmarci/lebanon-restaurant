@@ -9,3 +9,15 @@ This is a landing page created for a Lebanese Restaurant.
 ---
 
 ### Technology Used: SASS
+
+The aim of the project was to get familiar with SASS and implement the learnings into a practival landing page.
+
+---
+
+### Features:
+
+- CSS3 and SASS technologies
+- Responsivity
+- Interactive navigation
+- Stylish slider animation for food selection
+- Footer
